@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: trusted_customers
+    description: "Tabela trusted criada a partir da raw.customers"
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+  - name: trusted_orders
+    description: "Tabela trusted criada a partir da raw.orders"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
