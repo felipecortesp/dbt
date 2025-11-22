@@ -1,0 +1,10 @@
+dbt_m:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: analytics-trendlabs
+      dataset: "{{ env_var('DBT_DBNAME', 'dbt_dw') }}"
+      threads: 4
+      keyfile: /Users/felipecortes/.dbt/analytics-trendlabs-e78e76247aed.json
