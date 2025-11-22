@@ -8,4 +8,4 @@ select
   customer_id,
   order_date,
   cast(order_value as float64) as order_value
-from `raw.orders`
+from `lojadoima.raw.orders`
